@@ -1,0 +1,61 @@
+<div class="form">
+  <mat-card>
+    <form [formGroup]="form" (submit)="onSavePost()" *ngIf="!isLoading">
+      <mat-form-field>
+        Name :
+        <input formControlName="name" id="unique_talent_name" matInput #t type="text" />
+        <mat-error *ngIf="form.get('name')?.invalid">Please enter a valid name</mat-error>
+      </mat-form-field>
+
+      <mat-divider></mat-divider>
+      <br />
+
+      <mat-form-field>
+        Year of study :
+        <input formControlName="year" id="unique_talent_year" matInput #t type="text" />
+        <mat-error *ngIf="form.get('year')?.invalid">Please enter a valid year
+        </mat-error>
+      </mat-form-field>
+      <mat-divider></mat-divider>
+      <br />
+
+      <mat-form-field>
+        Department :
+        <input formControlName="department" id="unique_talent_dept" matInput #t type="text" />
+        <mat-error *ngIf="form.get('department')?.invalid">Please enter valid Department
+        </mat-error>
+      </mat-form-field>
+      <mat-divider></mat-divider>
+      <br />
+      <mat-form-field>
+        Enter the skill You need to add!
+        <input formControlName="skill" id="unique_talent_skill" matInput #t type="text" />
+        <mat-error *ngIf="form.get('skill')?.invalid">Please enter skill
+        </mat-error>
+      </mat-form-field>
+      <mat-divider></mat-divider>
+
+      <br />
+      <div class="btns">
+        <button mat-stroked-button type="button" (click)="filepicker.click()">
+          Pick Image
+        </button>
+        <input type="file" #filepicker (change)="onImagePicked($event)" style="display: none" />
+        <!-- inorder to handle the event object in the case we use this one -->
+      </div>
+      <div class="image-preview" *ngIf="imagePreview !== '' && imagePreview && form.get('image').valid">
+        <img class="preview" [src]="imagePreview" [alt]="form.value.title" />
+      </div>
+      <div class="btns">
+        <button type="submit" id="unique_talent_save" mat-raised-button color="primary">
+          Save button
+        </button>
+      </div>
+    </form>
+  </mat-card>
+
+</div>
+<div class="display">
+  <h2>{{display}}</h2>
+</div>
+<hr />

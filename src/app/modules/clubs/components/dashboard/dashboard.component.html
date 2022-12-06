@@ -1,0 +1,60 @@
+<!-- This component acts as app.component for clubs page -->
+
+<!-- <div class="hamMenu">
+  <button class="logo" (click)="toggleSidebar()">&equiv;</button>
+</div>
+<div class="main1">
+  <div class="top" *ngIf="display">
+    <div class="navig">
+      <ul class="sidenav-nav">
+        <li routerLink="geekforgeeks" routerLinkActive="active">
+          Geek for Geeks
+        </li>
+        <li routerLink="GDSC" routerLinkActive="active">GDSC</li>
+        <li routerLink="bitsnbytes" routerLinkActive="active">Bits & Bytes</li>
+      </ul>
+    </div>
+  </div>
+  <div class="middle">
+    <router-outlet></router-outlet>
+  </div>
+</div> -->
+
+<mat-toolbar>
+  <mat-toolbar-row>
+    <button (click)="sidenav.toggle()" mat-icon-button>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div class="example-form">
+      <form>
+        <mat-form-field class="example-full-width">
+          <span matPrefix> </span>
+          <input type="tel" matInput placeholder="Search" name="search" [(ngModel)]="search" />
+        </mat-form-field>
+        <br />
+        {{ search }}
+      </form>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav opened="true" mode="side">
+    <mat-nav-list style="width: 30vh">
+      <a style="font-size: 2vh" routerLink="geekforgeeks" routerLinkActive="active" mat-list-item><img
+          src="assets/img/GeeksforGeeks.png" alt="gfg image" />Geek for
+        Geeks</a>
+      <a style="font-size: 2vh" routerLink="GDSC" routerLinkActive="active" mat-list-item><img src="assets/img/gdsc.png"
+          alt="gfg image" />GDSC</a>
+      <a style="font-size: 2vh" routerLink="bitsnbytes" routerLinkActive="active" mat-list-item><img
+          src="assets/img/bnbzoom.png" alt="gfg image" />Bits & Bytes</a>
+
+      <a *ngIf="isAuth" style="font-size: 2vh" routerLink="/Clubs/AddEvent" routerLinkActive="active" mat-list-item>Add
+        events as Admin</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content style="background-color: white; color: #212121">
+    <div style="min-height: 83vh; margin: 2vh 15vh">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

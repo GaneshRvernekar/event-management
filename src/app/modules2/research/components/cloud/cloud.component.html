@@ -1,0 +1,24 @@
+<div *ngFor="let res of researches">
+  <div *ngIf="res.resID==67891">
+  <h1>Current On-Going Projects</h1>
+  <div class="proj_items">
+    <div class="box">
+      <h2 class="proj_heading">{{ res.resName }}</h2>
+      <p>
+        {{res.description}}
+      </p>
+      <p>For more info please Contact</p>
+      <div class="info">
+        <p>Name: {{ res.name }}</p>
+        <p>Contact No:{{ res.contact }}</p>
+        <p>Email :{{ res.email }}</p>
+      </div>
+    </div>
+    <div class="img">
+      <img src="assets/img/q.jpg" alt="quantizationimg" />
+    </div>
+  </div>
+  <button mat-button class="del" (click)="Delete_(res.id)">
+    Delete
+  </button>
+</div>

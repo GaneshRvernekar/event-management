@@ -1,0 +1,38 @@
+<div class="login">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Login</mat-card-title>
+    </mat-card-header>
+    <form (submit)="onLogin(LoginForm)" #LoginForm="ngForm" *ngIf="!isLoading">
+      <mat-form-field>
+        <input matInput type="email" placeholder="E-mail" id="unique_l_email" name="email" #emailInput="ngModel" ngModel required>
+        <mat-error *ngIf="emailInput.invalid">Please enter a valid email </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input type="password" name="password" id="unique_l_password" required #passwordInput="ngModel" ngModel matInput
+          placeholder="password">
+        <mat-error *ngIf="passwordInput.invalid">Please enter a valid password </mat-error>
+      </mat-form-field>
+      <button *ngIf="!isLoading" type="submit" id="unique_login_submit" mat-raised-button color="secondary">Login</button>
+    </form>
+  </mat-card>
+</div>
+
+<!-- <main class="form-signin w-100 m-auto">
+  <form (submit)="onLogin(LoginForm)" #LoginForm="ngForm" *ngIf="!isLoading">
+    <h1 class="h3 mb-3 fw-normal">Login</h1>
+
+    <div class="form-floating">
+      <input class="form-control" type="email" placeholder="E-mail" name="email" #emailInput="ngModel" ngModel required>
+      <label for="floatingInput">Email address</label>
+      <mat-error *ngIf="emailInput.invalid">Please enter a valid email </mat-error>
+    </div>
+    <div class="form-floating">
+      <input class="form-control" type="password" name="password" required #passwordInput="ngModel" ngModel matInput
+      placeholder="password">
+      <label for="floatingPassword">Password</label>
+      <mat-error class="invalid-feedback">Please enter a valid password </mat-error>
+    </div>
+    <button *ngIf="!isLoading" class="w-100 btn btn-lg btn-primary" type="submit">Log in</button>
+  </form>
+</main> -->

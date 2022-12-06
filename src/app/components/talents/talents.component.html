@@ -1,0 +1,62 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<div class="intro">
+  <div class="tal">
+    <div class="img"></div>
+    <img src="assets/img/talent.jpg" alt="talent image" class="introImg" />
+    <div class="text">
+      <h1>Got some talent to showcase?</h1>
+      <p>Here's your chance to upload your videos!!</p>
+      <p>Get yourself going and let the world recognize your talent!!</p>
+    </div>
+  </div>
+</div>
+<div class="search-talent">
+  <h1>Search For Talents</h1>
+  <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off"
+    placeholder="Search for talents by Name, Year, Departments, Skills" />
+</div>
+
+<div class="main">
+  <ng-container *ngFor="let u of talents | filter: searchText ; index as i">
+    <div class="content" id="cont1">
+      <div class="video">
+        <img class="vid" src="{{ u.imagePath }}" />
+      </div>
+      <div class="descp">
+        <div class="img">
+          <img src="{{ u.imagePath }}" alt="Avatar" class="imgs" />
+        </div>
+        <div class="info">
+          <div class="name">{{ u.name }}</div>
+          <div class="talent">{{ u.skill }}</div>
+          <div class="branch">{{ u.department }}</div>
+          <div class="socials">
+            <a class="fa fa-youtube" id="you" style="font-size: 20px" href="https://www.youtube.com/c/CodeWithHarry"
+              target="_blank"></a>
+            <a class="fa fa-instagram" id="inst" style="font-size: 20px" href="https://www.youtube.com/c/CodeWithHarry"
+              target="_blank"></a>
+            <a class="btn fa fa-thumbs-up fa-lg" id="green" (click)="likeCount()">
+              {{like}}</a>
+            <a class="btn fa fa-thumbs-down fa-lg" id="red">
+              <!-- <i class="fa fa-thumbs-down fa-lg" aria-hidden="true"></i> -->
+            </a>
+
+            <div class="all_btns">
+
+              <button [routerLink]="['/edit', u.id]"  id="edit_unique_{{i}}"*ngIf="userIsAuthenticated && userId == u.creator">
+                Edit
+              </button>
+              <button (click)="Delete(u.id)"  id="delete_unique_{{i}}" *ngIf="userIsAuthenticated && userId == u.creator">
+                Delete
+              </button>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

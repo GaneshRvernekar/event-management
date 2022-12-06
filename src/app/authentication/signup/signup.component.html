@@ -1,0 +1,36 @@
+<!-- <mat-card>
+  <form (submit)="onSignUp(signUpForm)" #signUpForm="ngForm" *ngIf="!isLoading">
+    <mat-form-field>
+      <input matInput type="email" placeholder="E-mail" name="email" #emailInput="ngModel" ngModel required>
+      <mat-error *ngIf="emailInput.invalid">Please enter a valid email </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input type="password" name="password" required #passwordInput="ngModel" ngModel matInput placeholder="password">
+      <mat-error *ngIf="passwordInput.invalid">Please enter a valid password </mat-error>
+    </mat-form-field>
+    <button *ngIf="!isLoading" type="submit" mat-raised-button color="primary">Sign Up</button>
+
+  </form>
+</mat-card>
+<hr> -->
+
+
+<div class="login">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Sign Up</mat-card-title>
+    </mat-card-header>
+    <form (submit)="onSignUp(signUpForm)" #signUpForm="ngForm" *ngIf="!isLoading">
+      <mat-form-field>
+        <input matInput type="email" placeholder="E-mail" id="unique_s_email" name="email" #emailInput="ngModel" ngModel required>
+        <mat-error *ngIf="emailInput.invalid">Please enter a valid email </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input type="password" name="password" id="unique_s_password" required #passwordInput="ngModel" ngModel matInput
+          placeholder="password">
+        <mat-error *ngIf="passwordInput.invalid">Please enter a valid password </mat-error>
+      </mat-form-field>
+      <button *ngIf="!isLoading" type="submit" id="unique_signup_submit" mat-raised-button color="secondary">Sign Up</button>
+    </form>
+  </mat-card>
+</div>

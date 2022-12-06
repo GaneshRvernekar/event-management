@@ -1,0 +1,60 @@
+<div *ngFor="let event of events2">
+  <div *ngIf="event.ClubID==12340">
+    <div class="box">
+      <h1>Event Description</h1>
+      <p>
+        {{event.description}}
+      </p>
+    </div>
+    <mat-divider style="background-color: black;"></mat-divider>
+    <div class="box">
+      <h1>Event Info(Date, time, place)</h1>
+      <p>📝 Date : {{event.eDate}}</p>
+      <p>⏰ Time : {{event.time}}</p>
+      <p>📍 Venue: {{event.venue}}</p>
+      <p></p>
+    </div>
+
+    <button *ngIf="isAuth" mat-button class="del" (click)="Delete(event.id)">
+      Delete
+    </button>
+    <mat-divider style="background-color: black;"></mat-divider>
+    <div class="box">
+      <h1>Previous Events</h1>
+      <p *ngIf="images.length==0">No Images</p>
+      <div class="image">
+        <ngb-carousel class="mov_slider" *ngIf="images">
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img class="imgs" src="assets/img/ai.jpg" alt="Random first slide" />
+            </div>
+            <div class="carousel-caption">
+              <h1>Find the hidden Talent within you!</h1>
+              <p>Portal aims at bringing out the talents hidden within the students of the university
+              </p>
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img class="imgs" src="assets/img/clubs.jpg" alt="Random second slide" />
+            </div>
+            <div class="carousel-caption">
+              <h1>Clubs and Organization within the university</h1>
+              <p>Portal aims at bringing interaction between the clubs and students</p>
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img class="imgs" src="assets/img/research.jpg" alt="Random third slide" />
+            </div>
+            <div class="carousel-caption">
+              <h1>Reasearch undergoing in the college</h1>
+              <p>Portal aims at encouraging Students to explore Research fields</p>
+            </div>
+          </ng-template>
+        </ngb-carousel>
+      </div>
+    </div>
+  </div>
+
+</div>

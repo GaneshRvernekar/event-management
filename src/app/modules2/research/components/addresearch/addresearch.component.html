@@ -1,0 +1,71 @@
+<main class="form-signin">
+  <form [formGroup]="ResearchForm" (submit)="submit()">
+      <h1 class="h3 mb-3 fw-normal">Add Research</h1>
+      <div class="form-floating">
+          <input formControlName="resID" type="number" class="form-control" min="100" max="1500" id="resID"
+              placeholder="Please enter the club ID once again">
+          <label for="floatingPassword">Research Group ID</label>
+          <div class="err">
+              <small *ngIf="
+            ResearchForm.get('resID')?.touched && ResearchForm.get('resID')?.invalid
+          ">*Please Enter your Research Admin ID</small>
+          </div>
+      </div>
+      <div class="form-floating">
+          <input formControlName="resName" type="text" class="form-control" id="resName"
+              placeholder="Enter a Research Project Name" />
+          <label for="floatingPassword">Research Project Name</label>
+          <div class="err">
+              <small *ngIf="
+            ResearchForm.get('resName')?.touched && ResearchForm.get('resName')?.invalid
+          ">*Please Enter a research project name</small>
+          </div>
+      </div>
+      <div class="form-floating">
+          <textarea formControlName="description" rows="10" cols="10" minlength="10" class="form-control"
+              id="description" placeholder="Event Description..."></textarea>
+          <label for="description">Project Description</label>
+          <div class="err">
+              <small *ngIf="
+            ResearchForm.get('description')?.touched && ResearchForm.get('description')?.invalid
+          ">*Description should be a minimum if 10 characters</small>
+          </div>
+      </div>
+      <h1 class="h3 mb-3 my-3 fw-normal">Add Project concerned authority information</h1>
+      <div class="form-floating">
+          <input formControlName="name" type="text" class="form-control" id="resName"
+              placeholder="Enter a Research Project Name" />
+          <label for="floatingPassword">Name</label>
+          <div class="err">
+              <small *ngIf="
+            ResearchForm.get('name')?.touched && ResearchForm.get('resName')?.invalid
+          ">*Please Enter a name</small>
+          </div>
+      </div>
+      <div class="form-floating">
+          <input formControlName="contact" type="text" class="form-control" maxlength="10" id="time" placeholder="Time" />
+          <label for="floatingPassword">Contact Number</label>
+          <div class="err">
+              <small *ngIf="
+            ResearchForm.get('contact')?.touched && ResearchForm.get('contact')?.invalid
+          ">*Add a contact number</small>
+          </div>
+      </div>
+      <div class="form-floating">
+          <input formControlName="email" type="email" class="form-control" id="email" placeholder="Example@email.com" />
+          <label for="floatingPassword">Email ID</label>
+          <div class="err">
+              <small *ngIf="
+            ResearchForm.get('email')?.touched && ResearchForm.get('email')?.invalid
+          ">*Enter an Email ID</small>
+          </div>
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" type="submit">
+          Add Research
+      </button>
+      <div class="display">
+          <h3 class="successMessage">{{ msg }}</h3>
+      </div>
+  </form>
+
+</main>

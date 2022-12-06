@@ -1,0 +1,42 @@
+.box{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    height: 100%;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+/* .image{
+    display: flex;
+    flex-direction: row;
+} */
+
+/* 
+img{
+    max-width: 500px;
+    max-height: 500px;
+    margin: 5px;
+} */
+.del{
+    margin:2vh;
+    background-color: red;
+    color: white;
+  }
+.imgs{
+    width: 100%;
+}
+p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    line-height: 3.5vh;
+    justify-content: center;
+}
+h1{
+    font-size: 1.8em;
+    color: aliceblue;
+    background-image:linear-gradient(to right,#474444,white);
+    border-radius: 3px;
+    padding: 10px 3px;
+}
+

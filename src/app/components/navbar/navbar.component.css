@@ -1,0 +1,35 @@
+.reglog {
+  display: flex;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  font-weight: 400;
+}
+.navbar-dark .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show > .nav-link {
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  text-decoration-line: none;
+  outline: none;
+}
+.active {
+  color: black;
+  background-color: white;
+  font-weight: 500;
+  border-radius: 1vh;
+}
+a {
+  transition: ease-in-out 0.01s;
+  font-size: medium;
+}
+.last-two{
+  margin-left: 2vh;
+  align-items: center;
+  padding: 0;
+}
+li{
+  margin-right: 2vh;
+}

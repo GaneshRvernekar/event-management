@@ -1,0 +1,241 @@
+<div class="page">
+  <div class="title_">
+    <h1 class="heading">EVERYTHING YOU WANT</h1>
+    <div class="slider">
+      <div>Talent </div>
+      <div>Research </div>
+      <div>Event</div>
+    </div>
+  </div>
+  <div class="carousel">
+    <ngb-carousel class="mov_slider" *ngIf="images">
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img src="assets/img/ai.jpg" alt="Random first slide" />
+        </div>
+        <div class="carousel-caption">
+          <h1>Find the hidden Talent within you!</h1>
+          <p>Portal aims at bringing out the talents hidden within the students of the university
+          </p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img src="assets/img/clubs.jpg" alt="Random second slide" />
+        </div>
+        <div class="carousel-caption">
+          <h1>Clubs and Organization within the university</h1>
+          <p>Portal aims at bringing interaction between the clubs and students</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img src="assets/img/research.jpg" alt="Random third slide" />
+        </div>
+        <div class="carousel-caption">
+          <h1>Reasearch undergoing in the college</h1>
+          <p>Portal aims at encouraging Students to explore Research fields</p>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+  <div class="grid-container">
+    <div class="grid-item grid-item-1">
+      <h1 class="grid-heading">News</h1>
+      <ul class="news"  *ngFor="let news of arr2">
+        <li>{{news}}</li>
+      </ul>
+
+    </div>
+    <div class="grid-item grid-item-2">
+      <div class="header2"></div>
+      <div class="main_content">
+        <h1 class="grid-heading">Research</h1>
+        <p class="content">Research Portal works closely with KLE academic and research communities to define their
+          technology needs,
+          aspects and provide innovative IT solutions that support the University's goal of academic and research
+          excellence</p>
+        <p class="content">
+          The Research Council is the statutory body that guides the University research strategies and initiatives and
+          approves policies, guidelines, and budgets for the research activities.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid-item grid-item-3">
+      <div class="header3"></div>
+      <div class="main_content">
+        <h1 class="grid-heading">Educational Clubs</h1>
+        <p class="content">Club portal works closely with KLE academic and club communities . As being a part of a club
+          helps you to gain
+          knowledge, skills and experience in leadership, communication, problem-solving, group development and
+          management, finance, presentation and public speaking. </p>
+        <p class="content">You will feel the change in yourself. You'll grow faster
+          than you think. It's the best way to meet people.</p>
+
+      </div>
+    </div>
+    <div class="grid-item grid-item-4">
+      <div class="header4"></div>
+      <div class="main-content">
+        <h1 class="grid-heading">Talents</h1>
+        <p class="content">Research Portal works closely with KLE academic and research communities to define their
+          Everyone is born with potential to do extraordinary in life. </p>
+        <p class="content">Unfortunately, we settled ordinary. When someone
+          asks what our talent is, we think for a while and say that we do not have any talent.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- <div class="combinely">
+    <div class="outside" id="out" (mouseover)="move_1()" (mouseout)="rmove_1()"
+      [ngClass]="{'_out':change==false,'r_out':change==true}">
+      <div class="write" id="head">
+        <h2 style="padding-left:15px;font-size:25px">Currently going on researches in the college</h2>
+      </div>
+      <div class="inside" id="in" [ngClass]="{'_in':change==false,'r_head':change==true}">
+        <div class="write1" id="head1" [ngClass]="{'_head':change==false,'r_head':change==true}">
+          Research Portal works closely with KLE academic and research communities to define their technology needs,
+          aspects and provide innovative IT solutions that support the University's goal of academic and research
+          excellence</div>
+      </div>
+    </div>
+  </div>
+  <div class="combinely_2">
+    <div class="outside_2" id="out_2" (mouseover)="move_2()" (mouseout)="rmove_2()"
+      [ngClass]="{'_out2':change2==false,'r_out2':change2==true}">
+      <div class="write" id="head_2">
+        <h2 style="padding-left:15px;font-size:25px">Explore All the activities within the club's</h2>
+      </div>
+      <div class="inside_2" id="in_2" [ngClass]="{'_in2':change2==false,'r_head2':change2==true}">
+        <div class="write1" id="head2" [ngClass]="{'_head2':change2==false,'r_head2':change2==true}"
+          style="padding: 5px;">
+          Club portal works closely with KLE academic and club communities . As being a part of a club helps you to gain
+          knowledge, skills and experience in leadership, communication, problem-solving, group development and
+          management, finance, presentation and public speaking. You will feel the change in yourself. You'll grow faster
+          than you think. It's the best way to meet people.</div>
+      </div>
+    </div>
+  </div>
+  <div class="combinely_3">
+    <div class="outside" id="out_3" (mouseover)="move_3()" (mouseout)="rmove_3()"
+      [ngClass]="{'_out3':change3==false,'r_out3':change3==true}">
+      <div class="write" id="head_3">
+        <h2 style="padding-left:15px ;font-size:25px;">Identify and Appreciate the Talents <br> withins the department
+        </h2>
+      </div>
+      <div class="inside" id="in_3" [ngClass]="{'_in3':change3==false,'r_head3':change3==true}">
+        <div class="write1" id="head3" [ngClass]="{'_head3':change3==false,'r_head3':change3==true}">
+          Everyone has Talent but not Everyone use it ,
+          Talent portal works closely with KLE academic and extra circular activities ,
+          <br>
+          Everyone is born with potential to do extraordinary in life. Unfortunately, we settled ordinary. When someone
+          asks what our talent is, we think for a while and say that we do not have any talent.
+
+        </div>
+      </div>
+    </div>
+  </div> -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+     <ngb-carousel >
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img src="https://picsum.photos/id/944/900/500" alt="Random first slide" />
+        </div>
+        <div class="carousel-caption">
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img src="https://picsum.photos/id/944/900/500" alt="Random second slide" />
+        </div>
+        <div class="carousel-caption">
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img src="https://picsum.photos/id/944/900/500" alt="Random third slide" />
+        </div>
+        <div class="carousel-caption">
+          <h3>Third slide label</h3>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </div>
+      </ng-template>
+    </ngb-carousel> -->
+
+
+<!-- <ngb-carousel class="mov_slider" >
+      <ng-template ngbSlide>
+       <div class="picsum-img-wrapper">
+        <img src="https://www.linkpicture.com/q/gdsc.jpeg" alt="Random first slide" />
+       </div>
+       <div class="carousel-caption">
+        <h3>First slide label</h3>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+       </div>
+      </ng-template>
+      <ng-template ngbSlide>
+       <div class="picsum-img-wrapper">
+        <img src="https://www.linkpicture.com/q/gdsc.jpeg" alt="Random second slide" />
+       </div>
+       <div class="carousel-caption">
+        <h3>Second slide label</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+       </div>
+      </ng-template>
+      <ng-template ngbSlide>
+       <div class="picsum-img-wrapper">
+        <img src="https://www.linkpicture.com/q/gdsc.jpeg" alt="Random third slide" />
+       </div>
+       <div class="carousel-caption">
+        <h3>Third slide label</h3>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+       </div>
+      </ng-template>
+     </ngb-carousel> -->
+
+<!-- <c-carousel>
+      <c-carousel-indicators></c-carousel-indicators>
+      <c-carousel-inner>
+        <c-carousel-item *ngFor="let slide of slides">
+          <img
+            alt="{{slide.title}}"
+            class="d-block w-100"
+            loading="lazy"
+            src="{{slide.src}}"
+          />
+          <c-carousel-caption class="d-none d-md-block">
+            <h3>{{slide.title}}</h3>
+            <p>{{slide.subtitle}}</p>
+          </c-carousel-caption>
+        </c-carousel-item>
+      </c-carousel-inner>
+      <c-carousel-control [routerLink] caption="Previous" direction="prev"></c-carousel-control>
+      <c-carousel-control [routerLink] caption="Next" direction="next"></c-carousel-control>
+    </c-carousel>
+    -->

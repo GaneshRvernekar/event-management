@@ -1,0 +1,22 @@
+footer {
+  width: 100%;
+  color: white;
+  text-align: center;
+  background-color: #28282b;
+  z-index: 1;
+  margin-bottom: 0px;
+  position: relative;
+  bottom: 0;
+}
+h2 {
+  margin: 0;
+}
+.info {
+  display: flex;
+  justify-content: center;
+}
+.box {
+  margin: 0 5vh;
+  font-size: medium;
+  margin-bottom: 0;
+}

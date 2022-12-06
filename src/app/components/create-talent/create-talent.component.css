@@ -1,0 +1,28 @@
+.mat-form-field {
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  min-height: 72vh;
+}
+.mat-card {
+  margin-top: 50px;
+  width: 100vh;
+}
+button {
+  position: relative;
+  left: 42vh;
+  margin: 1vh 0;
+}
+img {
+  height: 20rem;
+  width: 100%;
+}
+.display{
+  margin-left: 47.5%;
+}
+

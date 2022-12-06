@@ -1,0 +1,50 @@
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a style="color: white" class="navbar-brand">KLETECH</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="Home" routerLinkActive="active">Home <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="Clubs" routerLinkActive="active">Clubs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="Research" routerLinkActive="active">Research</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="Talents" routerLinkActive="active">Talents</a>
+      </li>
+
+      <div class="reglog" *ngIf="fine">
+        <button style="padding:0px 4px;" mat-button class="last-two" id="unique_login" mat-flat-button routerLink="/add-talent"
+          routerLinkActive="active">
+          Add Your Talent
+        </button>
+      </div>
+    </ul>
+    <div class="reglog">
+      <button mat-button class="last-two" id="unique_login" mat-flat-button routerLink="/login"
+        routerLinkActive="active" *ngIf="!fine">
+        Login
+      </button>
+      <button mat-button class="last-two" id="unique_signup" mat-flat-button routerLink="/signup"
+        routerLinkActive="active" *ngIf="!fine">
+        Sign Up
+      </button>
+    </div>
+    <button mat-button class="last-two" id="unique_logout" mat-flat-button routerLink="/login" routerLinkActive="active"
+      *ngIf="fine" (click)="logout()">
+      Log out
+    </button>
+  </div>
+</nav>
