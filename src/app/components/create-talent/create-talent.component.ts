@@ -35,7 +35,7 @@ export class CreateTalentComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.authStatusSub = this.Aservice.getAuthStatusListener().subscribe(
       (authStatus) => {
-        this.isLoading = false;
+        this.isLoading = true;
       }
     );
 

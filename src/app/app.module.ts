@@ -61,20 +61,20 @@ import { ErrorComponent } from './error/error/error.component';
     Ng2SearchPipeModule,
     MatDialogModule,
   ],
-  providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: AuthInterceptor,
-      multi: true,
-    },
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: ErrorInterceptor,
-      multi: true,
-    },
-  ],
+  // providers: [
+  //   {
+  //     provide: HTTP_INTERCEPTORS,
+  //     useClass: AuthInterceptor,
+  //     multi: true,
+  //   },
+  //   {
+  //     provide: HTTP_INTERCEPTORS,
+  //     useClass: ErrorInterceptor,
+  //     multi: true,
+  //   },
+  // ],
   bootstrap: [AppComponent],
-  entryComponents: [ErrorComponent],
+  // entryComponents: [ErrorComponent],
   // as we going to select this component neither through routing or nor throw selector we are defing this component to be entry component within it .
 })
 export class AppModule {}

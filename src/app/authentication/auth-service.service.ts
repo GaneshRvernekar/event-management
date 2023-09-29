@@ -24,11 +24,11 @@ export class AuthServiceService {
 
     const authData:AuthData={email:email,password:password};
 
-    this.http.post("http://localhost:3000/api/user/signup",authData)
+    this.http.post("https://insights-ngy8.onrender.com/api/user/signup",authData)
     .subscribe((responce)=>{
       this.router.navigate(['/']);
     },error=>{
-      this.authStatusListener.next(false);
+      this.authStatusListener.next(true);
     });
   }
 
@@ -46,7 +46,7 @@ export class AuthServiceService {
     const authData:AuthData={email:email,password:password};
     // console.log(authData);
 
-    this.http.post<{expiresIn:number,token:string,userId:string}>("http://localhost:3000/api/user/login",authData)
+    this.http.post<{expiresIn:number,token:string,userId:string}>("https://insights-ngy8.onrender.com/api/user/login",authData)
     .subscribe(responce=>{
 
       const token = responce.token;
@@ -68,7 +68,7 @@ export class AuthServiceService {
         this.router.navigate(['/']);
       }
     },error=>{
-      this.authStatusListener.next(false);
+      this.authStatusListener.next(true);
       console.log(this.isAuthenticated);
       this.router.navigate(['/']);
     })

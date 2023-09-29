@@ -18,10 +18,17 @@ app.use(
     origin: [
       "http://localhost:3000",
       "http://localhost:8080",
-      "http://localhost:4200",
+      "https://spontaneous-swan-32e0c4.netlify.app",
+      "https://kletechinsights.netlify.app",
+      "https://front-end-lyart-theta.vercel.app",
+      "https://insightsofkletech.vercel.app",
+      "https://bvbinsights.vercel.app",
+      "https://insightsofkletech2.vercel.app",
+      "https://insights-ngy8.onrender.com/api/user/login",
+      "https://insights-ngy8.onrender.com/api/user/signup",
     ],
   })
-); 
+);
 
 mongoose.connect("mongodb+srv://ganesh:Ganesh2003@myfirstprojects.nejygcx.mongodb.net/cp?retryWrites=true&w=majority")
 .then(()=>{
@@ -33,7 +40,7 @@ mongoose.connect("mongodb+srv://ganesh:Ganesh2003@myfirstprojects.nejygcx.mongod
 
 app.use(bodyParser.json()); //it will parse the incoming data
 app.use(bodyParser.urlencoded({extended:false}));
-
+app.use(express.static('public'));
 app.use("/images",express.static(path.join("backend/images")));
 
 

@@ -4,7 +4,7 @@
 </head>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a style="color: white" class="navbar-brand">KLETECH</a>
+  <a style="color: white" class="navbar-brand">Projects Portal </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -15,20 +15,20 @@
       <li class="nav-item">
         <a class="nav-link" routerLink="Home" routerLinkActive="active">Home <span class="sr-only"></span></a>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" routerLink="Clubs" routerLinkActive="active">Clubs</a>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" routerLink="Research" routerLinkActive="active">Projects</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="Research" routerLinkActive="active">Research</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="Talents" routerLinkActive="active">Talents</a>
+        <a class="nav-link" routerLink="Talents" routerLinkActive="active">Recommended projects</a>
       </li>
 
-      <div class="reglog" *ngIf="fine">
+      <div class="reglog" >
         <button style="padding:0px 4px;" mat-button class="last-two" id="unique_login" mat-flat-button routerLink="/add-talent"
           routerLinkActive="active">
-          Add Your Talent
+          Add Your Project
         </button>
       </div>
     </ul>

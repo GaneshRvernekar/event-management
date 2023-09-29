@@ -1,8 +1,8 @@
 <div class="form">
   <mat-card>
-    <form [formGroup]="form" (submit)="onSavePost()" *ngIf="!isLoading">
+    <form [formGroup]="form" (submit)="onSavePost()">
       <mat-form-field>
-        Name :
+       Project name :
         <input formControlName="name" id="unique_talent_name" matInput #t type="text" />
         <mat-error *ngIf="form.get('name')?.invalid">Please enter a valid name</mat-error>
       </mat-form-field>
@@ -11,7 +11,7 @@
       <br />
 
       <mat-form-field>
-        Year of study :
+       Description :
         <input formControlName="year" id="unique_talent_year" matInput #t type="text" />
         <mat-error *ngIf="form.get('year')?.invalid">Please enter a valid year
         </mat-error>
@@ -20,7 +20,7 @@
       <br />
 
       <mat-form-field>
-        Department :
+        Domain :
         <input formControlName="department" id="unique_talent_dept" matInput #t type="text" />
         <mat-error *ngIf="form.get('department')?.invalid">Please enter valid Department
         </mat-error>
@@ -28,7 +28,7 @@
       <mat-divider></mat-divider>
       <br />
       <mat-form-field>
-        Enter the skill You need to add!
+        Enter team
         <input formControlName="skill" id="unique_talent_skill" matInput #t type="text" />
         <mat-error *ngIf="form.get('skill')?.invalid">Please enter skill
         </mat-error>

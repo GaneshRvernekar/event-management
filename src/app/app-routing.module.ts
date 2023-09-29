@@ -27,7 +27,7 @@ const routes: Routes = [
   { path:'Talents', component: TalentsComponent },
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
-  {path:'add-talent',component:CreateTalentComponent,canActivate:[AuthGaurd]},
+  {path:'add-talent',component:CreateTalentComponent},
   {path:'edit/:talentId',component:CreateTalentComponent,canActivate:[AuthGaurd]},
   {
     path:'Clubs/AddEvent',component:AddeventsComponent

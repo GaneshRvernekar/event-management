@@ -38,7 +38,7 @@ export class AddtalentService {
 
     this.http
       .post<{ message: string; talObj: talent }>(
-        'http://localhost:3000/api/talents',
+        'https://insights-ngy8.onrender.com/api/talents',
         postData
       )
       .subscribe((responceData) => {
@@ -58,17 +58,17 @@ export class AddtalentService {
       skill: string;
       imagePath: string;
       creator: string;
-    }>('http://localhost:3000/api/talents/' + id);
+    }>('https://insights-ngy8.onrender.com/api/talents/' + id);
   }
 
   deleteTalents(id: string) {
-    return this.http.delete('http://localhost:3000/api/talents/' + id);
+    return this.http.delete('https://insights-ngy8.onrender.com/api/talents/' + id);
   }
 
   getTalents() {
     this.http
       .get<{ message: string; talents: any; maxTalents: number }>(
-        'http://localhost:3000/api/talents'
+        'https://insights-ngy8.onrender.com/api/talents'
       )
       .pipe(
         map((postData) => {
@@ -132,7 +132,7 @@ export class AddtalentService {
     }
 
     this.http
-      .put('http://localhost:3000/api/talents/' + id, TalData)
+      .put('https://insights-ngy8.onrender.com/api/talents/' + id, TalData)
       .subscribe((response) => {
         this.route.navigate(['/']);
       });
